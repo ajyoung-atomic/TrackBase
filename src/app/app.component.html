@@ -5,10 +5,10 @@
   </h1>
 </div>
 <label>Artist: 
-    <input [(ngModel)]="musicbrainzID" (change)="getArtistDetails()" placeholder="music brainz id">
+    <input [(ngModel)]="searchTerm" (change)="executeMusicBrainzSearch()" placeholder="">
 </label>
 <div class="artist">
-    <ng-container *ngFor="let alias of overviewData.aliases">
-        <h3>{{ alias.name }}</h3>
+    <ng-container *ngFor="let artist of searchData.artists">
+        <h3>{{ artist.name }}</h3>
     </ng-container>
 </div>
