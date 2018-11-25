@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   private musicBrainzSearchURL = 'http://musicbrainz.org/ws/2/artist/?query=artist:';
   private myMusicBrainzSearchURL = '';
@@ -21,6 +22,11 @@ export class AppComponent {
     this.executeMusicBrainzSearch();
   }
 
+  // TODO: investigate why both getSearchData and executeMusicBrainzSearch must be called from constructor
+  // TODO: investigate what does subscribe do?
+  // TODO: rename executeMusicBrainzSearch to just executeSearch
+  // TODO: change html so that it does not reference the internal json property names
+  // TODO: figure out the right way to do mock data
   getSearchData() {
     console.log("AppComponent getSearchData");
     this.myMusicBrainzSearchURL = this.musicBrainzSearchURL 

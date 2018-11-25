@@ -1,14 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="background-image-1">
+<ul>
+  <li><a href="mpt">Most Played Today</a></li>
+  <li><a href="apo">Amount of People Online</a></li>
+  <li><a href="d&t">Date and time</a></li>
+</ul>
+    
+<ul>
+  <li><a href="cah">Comment and Annotation History</a></li>
+  <li><a href="pln">Playing Now</a></li>
+  <li><a href="ope">Open Ear</a></li>
+</ul>
+<div class="center-page">
+  <h1>{{ title }}</h1>
+  <h2> 
+    <input [(ngModel)]="searchTerm" (change)="executeMusicBrainzSearch()" placeholder="What is it you seek?">
+  </h2>
+  <div class="artist">
+      <ng-container *ngFor="let artist of searchData.artists">
+          <h3>{{ artist.name }}</h3>
+      </ng-container>
+  </div>
 </div>
-<label>Artist: 
-    <input [(ngModel)]="searchTerm" (change)="executeMusicBrainzSearch()" placeholder="">
-</label>
-<div class="artist">
-    <ng-container *ngFor="let artist of searchData.artists">
-        <h3>{{ artist.name }}</h3>
-    </ng-container>
-</div>
+</div> 
