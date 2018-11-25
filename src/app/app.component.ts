@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-root',
