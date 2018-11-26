@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./0Trackbase.css']
 })
 
 export class AppComponent {
@@ -31,7 +31,7 @@ export class AppComponent {
   // TODO: figure out the right way to do mock data
   getSearchData() {
     console.log("AppComponent getSearchData");
-    this.myMusicBrainzSearchURL = this.musicBrainzSearchURL 
+    this.myMusicBrainzSearchURL = this.musicBrainzSearchURL
       + this.searchTerm
       + '&fmt=json';
     return this.http.get(this.myMusicBrainzSearchURL)
