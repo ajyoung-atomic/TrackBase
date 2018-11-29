@@ -69,7 +69,14 @@ h2
 {
   font-size: 25px;
   left: 0;
-  font-size:10px;
+  position: relative;
+  width: 100%;
+}
+
+h3
+{
+  font-size: 25px;
+  left: 0;
   position: relative;
   width: 100%;
 }

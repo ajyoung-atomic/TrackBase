@@ -14,7 +14,7 @@
 <div class="center-page">
   <h1>{{ title }}</h1>
   <h2>
-    <input [(ngModel)]="searchTerm" (change)="executeMusicBrainzSearch()" placeholder="What is it you seek?">
+    <input [(ngModel)]="searchTerm" (change)="initiateSearch()" placeholder="What is it you seek?">
   </h2>
   <div class="artist">
       <ng-container *ngFor="let artist of searchData.artists">
