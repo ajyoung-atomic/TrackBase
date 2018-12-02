@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css', './0Trackbase.css']
