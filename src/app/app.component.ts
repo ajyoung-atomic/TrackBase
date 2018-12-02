@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
   encapsulation: ViewEncapsulation.None,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', './0Trackbase.css']
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
