@@ -52,17 +52,6 @@ li a:hover {
   background-color:#04a4fc;
 }
 
-/*
-.background-image-1 {
-  background-image: url("../assets/z-image.jpg");
-  height: 100%;
-  top: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-}
-*/
-
 .center-page {
   position: relative;
   top: 25%;
