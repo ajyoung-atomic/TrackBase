@@ -1,0 +1,6 @@
+<ul class="artists">
+  <li *ngFor="let artist of artists" (click)="onSelect(artist)">
+    <span class="artist.id">{{artist.id}}</span>
+      {{artist.name | lowercase}}
+  </li>
+</ul>

@@ -16,6 +16,7 @@
   <h2>
     <input [(ngModel)]="searchTerm" (change)="initiateSearch()" placeholder="What is it you seek?">
   </h2>
+  <app-artists></app-artists>
   <div class="artist">
       <ng-container *ngFor="let artist of searchData.artists">
           <h3>{{ artist.name }}</h3>
