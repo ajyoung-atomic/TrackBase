@@ -1,26 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="background-image-1">
-<ul>
-  <li><a href="mpt">Most Played Today</a></li>
-  <li><a href="apo">Amount of People Online</a></li>
-  <li><a href="d&t">Date and time</a></li>
-</ul>
+  <ul>
+    <li><a href="mpt">Most Played Today</a></li>
+    <li><a href="apo">Amount of People Online</a></li>
+    <li><a href="d&t">Date and time</a></li>
+  </ul>
 
-<ul>
-  <li><a href="cah">Comment and Annotation History</a></li>
-  <li><a href="pln">Playing Now</a></li>
-  <li><a href="ope">Open Ear</a></li>
-</ul>
-<div class="center-page">
-  <h1>{{ title }}</h1>
-  <h2>
-    <input [(ngModel)]="searchTerm" (change)="initiateSearch()" placeholder="What is it you seek?">
-  </h2>
-  <app-artists></app-artists>
-  <div class="artist">
-      <ng-container *ngFor="let artist of searchData.artists">
-          <h3>{{ artist.name }}</h3>
-      </ng-container>
+  <ul>
+    <li><a href="cah">Comment and Annotation History</a></li>
+    <li><a href="pln">Playing Now</a></li>
+    <li><a href="ope">Open Ear</a></li>
+  </ul>
+  <div class="center-page">
+    <h1>{{ title }}</h1>
+    <app-artists></app-artists>
   </div>
-</div>
 </div>

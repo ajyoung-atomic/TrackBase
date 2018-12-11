@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Artist } from '../artist';
-import { ARTISTS } from '../mock-artists';
+import { ArtistService } from '../artist.service';
 
 @Component({
   selector: 'app-artists',
@@ -9,14 +9,21 @@ import { ARTISTS } from '../mock-artists';
 })
 export class ArtistsComponent implements OnInit {
   selectedArtist: Artist;
-  artists = ARTISTS;
+  artists: Artist[];
+
+  getArtists(): void {
+    this.artists = this.artistService.getArtists();
+  }
 
   onSelect(artist: Artist): void {
+    console.log("onSelect");
     this.selectedArtist = artist;
   }
-  constructor() { }
+
+  constructor(private artistService: ArtistService) { }
 
   ngOnInit() {
+    this.getArtists();
   }
 
 }

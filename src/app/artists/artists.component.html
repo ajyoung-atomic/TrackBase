@@ -1,6 +1,19 @@
+<h2>
+  <!-- <input [(ngModel)]="selectedArtist.name" placeholder="What is it you seek?"> -->
+  What is it you seek?
+</h2>
 <ul class="artists">
-  <li *ngFor="let artist of artists" (click)="onSelect(artist)">
-    <span class="artist.id">{{artist.id}}</span>
-      {{artist.name | lowercase}}
+  <li *ngFor="let artist of artists"
+    [class.selected]="artist === selectedArtist"
+    (click)="onSelect(artist)">
+    <span class="badge">{{artist.id}}</span> {{artist.name}}
   </li>
 </ul>
+<app-artist-detail [artist]="selectedArtist"></app-artist-detail>
+<!--
+<div class="artist">
+    <ng-container *ngFor="let artist of searchData.artists">
+        <h3>{{ artist.name }}</h3>
+    </ng-container>
+</div>
+-->

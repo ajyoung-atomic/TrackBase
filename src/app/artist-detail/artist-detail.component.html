@@ -1,3 +1,9 @@
-<p>
-  artist-detail works!
-</p>
+<div *ngIf="artist">
+  <h2>{{artist.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{artist.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="artist.name" placeholder="name">
+    </label>
+  </div>
+</div>
