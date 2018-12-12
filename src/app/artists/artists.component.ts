@@ -12,7 +12,8 @@ export class ArtistsComponent implements OnInit {
   artists: Artist[];
 
   getArtists(): void {
-    this.artists = this.artistService.getArtists();
+    this.artistService.getArtists()
+      .subscribe(artists => this.artists = artists);
   }
 
   onSelect(artist: Artist): void {

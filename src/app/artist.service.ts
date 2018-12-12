@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Artist } from './artist';
 import { ARTISTS } from './mock-artists';
 
@@ -7,8 +8,8 @@ import { ARTISTS } from './mock-artists';
 })
 export class ArtistService {
 
-  getArtists(): Artist[] {
-    return ARTISTS;
+  getArtists(): Observable<Artist[]> {
+    return of(ARTISTS);
   }
 
   constructor() { }
