@@ -7,18 +7,24 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistsComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
       BrowserModule,
       FormsModule,
-      HttpModule
+      HttpModule,
+      AppRoutingModule
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]

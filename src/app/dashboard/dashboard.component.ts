@@ -3,12 +3,12 @@ import { Artist } from '../artist';
 import { ArtistService } from '../artist.service';
 
 @Component({
-  selector: 'app-artists',
-  templateUrl: './artists.component.html',
-  styleUrls: ['./artists.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class ArtistsComponent implements OnInit {
-  artists: Artist[];
+export class DashboardComponent implements OnInit {
+  artists: Artist[] = [];
 
   constructor(private artistService: ArtistService) { }
 
@@ -18,7 +18,7 @@ export class ArtistsComponent implements OnInit {
 
   getArtists(): void {
     this.artistService.getArtists()
-      .subscribe(artists => this.artists = artists);
+      .subscribe(artists => this.artists = artists.slice(1, 5));
   }
 
 }

@@ -11,8 +11,17 @@
     <li><a href="pln">Playing Now</a></li>
     <li><a href="ope">Open Ear</a></li>
   </ul>
+
+  <nav>
+    <ul>
+      <li><a routerLink="dashboard">Home</a></li>
+      <li><a routerLink="artists">Artists</a></li>
+    </ul>
+  </nav>
+
   <div class="center-page">
     <h1>{{ title }}</h1>
-    <app-artists></app-artists>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
   </div>
 </div>

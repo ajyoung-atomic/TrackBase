@@ -3,13 +3,12 @@
   What is it you seek?
 </h2>
 <ul class="artists">
-  <li *ngFor="let artist of artists"
-    [class.selected]="artist === selectedArtist"
-    (click)="onSelect(artist)">
-    <span class="badge">{{artist.id}}</span> {{artist.name}}
+  <li *ngFor="let artist of artists">
+    <a routerLink="/detail/{{artist.id}}">
+      <span class="badge">{{artist.id}}</span> {{artist.name}}
+    </a>
   </li>
 </ul>
-<app-artist-detail [artist]="selectedArtist"></app-artist-detail>
 <!--
 <div class="artist">
     <ng-container *ngFor="let artist of searchData.artists">
