@@ -21,4 +21,17 @@ export class ArtistsComponent implements OnInit {
       .subscribe(artists => this.artists = artists);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.artistService.addArtist({ name } as Artist)
+      .subscribe(artist => {
+        this.artists.push(artist);
+      });
+  }
+
+  delete(artist: Artist): void {
+    this.artists = this.artists.filter(a => a !== artist);
+    this.artistService.deleteArtist(artist).subscribe();
+  }
 }

@@ -28,6 +28,11 @@ export class ArtistDetailComponent implements OnInit {
       .subscribe(artist => this.artist = artist);
   }
 
+  save(): void {
+   this.artistService.updateArtist(this.artist)
+     .subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     this.location.back();
   }

@@ -7,8 +7,19 @@
     <a routerLink="/detail/{{artist.id}}">
       <span class="badge">{{artist.id}}</span> {{artist.name}}
     </a>
+    <button class="delete" title="delete artist"
+      (click)="delete(artist)">x</button>
   </li>
 </ul>
+<div>
+  <label>Artist name:
+    <input #artistName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(artistName.value); artistName.value=''">
+    add
+  </button>
+</div>
 <!--
 <div class="artist">
     <ng-container *ngFor="let artist of searchData.artists">
