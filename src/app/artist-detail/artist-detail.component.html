@@ -1,6 +1,8 @@
 <div *ngIf="artist">
   <h2>{{artist.name | uppercase}} Details</h2>
   <div><span>id: </span>{{artist.id}}</div>
+  <div><span>country: </span>{{artist.country}}</div>
+  <div><span>about: </span>{{artist.disambiguation}}</div>
   <div>
     <label>name:
       <input [(ngModel)]="artist.name" placeholder="name">
