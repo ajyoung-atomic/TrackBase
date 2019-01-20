@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   getArtists(): void {
     this.artistService.getArtists()
-      .subscribe(artists => this.artists = artists.slice(1, 5));
+      .subscribe(artists => this.artists = artists.slice(1, 100));
   }
 
 }
